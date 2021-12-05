@@ -47,10 +47,8 @@ def weather(city):
     print(weather+"°C")
  #----------------------------------------------------------------
 
-print(weather("Mahoba weather"))
-
-print('CamBot: Hello Welcome to my CamBot! What would you like from me?')
-print('CamBot: If you would like to stop talking, enter quit')
+print('KnowItAll: Hello Welcome to my CamBot! What would you like from me?')
+print('KnowItAll: If you would like to stop talking, enter quit')
 
 #Keep going until user wants to stop
 while(True):
@@ -65,7 +63,7 @@ while(True):
 
     # If your done
     if question.lower() == 'quit':
-        print("\nCamBot: Thanks for the chat!")
+        print("\nKnowItAll: Thanks for the chat!")
         break
     elif question.lower() == 'location':
         # Get the location you would like to search for
@@ -87,15 +85,15 @@ while(True):
         # Look for the question in questions
         for possibleQuestion in questions:
             if question.lower() in possibleQuestion.lower() or possibleQuestion.lower() in question.lower():
-                print(f'\nI do not understand, did you mean {possibleQuestion}?')
+                print(f'\nKnowItAll: I do not understand, did you mean {possibleQuestion}?')
                 a = input()
                 if a.lower() == 'y' or a.lower() == 'yes':
-                    print(f'\n{convo[possibleQuestion]}')
+                    print(f'\nKnowItAll: {convo[possibleQuestion]}')
                     break
         if flag == False:
-            print(f'Possible choices are {questions}. Run program again')
+            print(f'\nKnowItAll: Possible choices are {questions}. Run program again')
     else:
-        print(f'\nCamBot: {convo[question]}')
+        print(f'\nKnowItAll: {convo[question]}')
 
 
 
