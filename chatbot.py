@@ -22,8 +22,8 @@ convo = {
         'time' : datetime.today().time(),
         'year' : datetime.today().year,
         'fact' : randfacts.get_fact(),
-        'location' : 'Enter a place:   ',
-        'weather'  : 'Enter a place:   ',
+        'location' : 'KnowItAll: Enter a place:   ',
+        'weather'  : 'KnowItAll: Enter a place:   ',
 
         }
         #'formulas' : 'geometry, algebra, or trigonometry?'
@@ -62,10 +62,10 @@ while(True):
     #form = formulas.keys()
 
     # If your done
-    if question.lower() == 'quit':
+    if question.lower() == 'quit' or 'quit' in question.lower():
         print("\nKnowItAll: Thanks for the chat!")
         break
-    elif question.lower() == 'location':
+    elif question.lower() == 'location' or 'location' in question.lower():
         # Get the location you would like to search for
         question = input(convo['location'])
         # entering the location name
@@ -76,20 +76,22 @@ while(True):
         print("Latitude = ", getLoc.latitude, "\n")
         print("Longitude = ", getLoc.longitude)
         print('\n')
-    elif question.lower() == 'weather':
+    elif question.lower() == 'weather' or 'weather' in question.lower():
         city = input(convo['weather'])
         city = city + " weather"
         weather(city)
         # If the question was typed wrong
+    elif question.lower() == 'fact' or 'fact' in question.lower():
+        fac = randfacts.get_fact()
+        print(f'\nKnowItAll: {fac}')
     elif not question in questions:
         # Look for the question in questions
+        flag = False
         for possibleQuestion in questions:
             if question.lower() in possibleQuestion.lower() or possibleQuestion.lower() in question.lower():
-                print(f'\nKnowItAll: I do not understand, did you mean {possibleQuestion}?')
-                a = input()
-                if a.lower() == 'y' or a.lower() == 'yes':
-                    print(f'\nKnowItAll: {convo[possibleQuestion]}')
-                    break
+                print(f'\nKnowItAll: {convo[possibleQuestion]}')
+                flag = True
+                break
         if flag == False:
             print(f'\nKnowItAll: Possible choices are {questions}. Run program again')
     else:
@@ -97,7 +99,9 @@ while(True):
 
 
 
-
+#print(f'\nKnowItAll: I do not understand, did you mean {possibleQuestion}?')
+#a = input()
+#if a.lower() == 'y' or a.lower() == 'yes':
 
         '''
         if(question == 'formulas'):
