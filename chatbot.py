@@ -13,11 +13,11 @@ loc = Nominatim(user_agent="GetLoc")
 
 # All Q&A for the convo: Basic small talk
 convo = {
-        'Good Morning': 'Good Morning',
-        'Good Night' : 'Good Night',
-        'Hi': 'Hello',
-        'name?' : 'My name is Cameron Payton',
-        'age' : '20 years old',
+        'Good Morning': 'KnowItAll: Good Morning',
+        'Good Night' : 'KnowItAll: Good Night',
+        'hi': 'hello',
+        'name?' : 'KnowItAll: My name is KnowItAll',
+        'age' : 'KnowItAll: I have no age',
         'day' : datetime.today().date(),
         'time' : datetime.today().time(),
         'year' : datetime.today().year,
