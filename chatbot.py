@@ -16,6 +16,8 @@ convo = {
         'Good Morning': 'KnowItAll: Good Morning',
         'Good Night' : 'KnowItAll: Good Night',
         'hi': 'hello',
+        'thank you': 'KnowItAll: You are very welcome!',
+        'thanks': 'KnowItAll : You are very welcome!',
         'name?' : 'KnowItAll: My name is KnowItAll',
         'age' : 'KnowItAll: I have no age',
         'day' : datetime.today().date(),
@@ -47,7 +49,7 @@ def weather(city):
     print(weather+"°C")
  #----------------------------------------------------------------
 
-print('KnowItAll: Hello Welcome to my CamBot! What would you like from me?')
+print('KnowItAll: Hello Welcome! What would you like from me?')
 print('KnowItAll: If you would like to stop talking, enter quit')
 
 #Keep going until user wants to stop
