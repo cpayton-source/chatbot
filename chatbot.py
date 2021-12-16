@@ -171,7 +171,7 @@ while(True):
             print(f'KnowItAll: {algebra}')
         elif answer.lower() == 'trigonometry' or 'trigonometry' in answer.lower():
             print(f'KnowItAll: {trigonometry}')
-        if not answer in formulas:
+        elif not answer in formulas:
             # Look for the question in questions
             flag = False
             form = formulas.keys()
